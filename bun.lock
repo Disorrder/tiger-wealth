@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "tiger-wealth-demo-bun",
+      "name": "tiger-wealth-demo",
       "dependencies": {
         "next": "15.2.0-canary.70",
         "react": "^19.0.0",
