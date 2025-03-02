@@ -3,7 +3,7 @@ import { cn } from "~/lib/utils";
 function UserFormDesktopIcon({
   className,
   fill,
-}: { className?: string | undefined; fill?: string | null }) {
+}: { className?: string | undefined; fill?: string }) {
   return (
     // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
     <svg

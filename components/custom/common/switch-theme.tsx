@@ -5,26 +5,26 @@ import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
-import { Switch } from "~/components/ui/switch";
 import { cn } from "~/lib/utils";
+
 const SwitchTheme = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => {
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="flex translate-x-10 items-center">
       <SwitchPrimitives.Root
         className={cn(
           "peer relative inline-flex h-[26px] w-12 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-white data-[state=unchecked]:bg-white",
-          className,
-          { ...props },
+          className
         )}
         ref={ref}
         onCheckedChange={() => {
-          theme === "light" ? setTheme("dark") : setTheme("light");
+          setTheme(theme === "light" ? "dark" : "light");
         }}
+        {...props}
       >
         <Moon className="absolute left-[5px] z-10 h-[14px] w-[14px] text-white" />
         <Sun className="absolute right-[5px] z-10 h-[14px] w-[14px]" />
@@ -40,6 +40,6 @@ const SwitchTheme = React.forwardRef<
     </div>
   );
 });
-Switch.displayName = SwitchPrimitives.Root.displayName;
+SwitchTheme.displayName = SwitchPrimitives.Root.displayName;
 
 export { SwitchTheme };

@@ -54,7 +54,6 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
             >
               {" "}
               <RadioGroupItem
-                classNameInnerCircle="size-[18px]"
                 className="size-6"
                 value="3 months"
                 id="option1"
@@ -149,7 +148,6 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
               >
                 {" "}
                 <RadioGroupItem
-                  classNameInnerCircle="size-[18px]"
                   className="size-6"
                   value="3 months"
                   id="option2"

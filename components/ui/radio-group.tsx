@@ -21,7 +21,6 @@ function RadioGroup({
 
 function RadioGroupItem({
   className,
-  classNameInnerCircle,
   ...props
 }: React.ComponentProps<typeof RadioGroupPrimitive.Item>) {
   return (
@@ -39,8 +38,7 @@ function RadioGroupItem({
       >
         <CircleIcon
           className={cn(
-            "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-3 rounded-full bg-gradient-to-r from-accent to-theme-orange stroke-none outline-none",
-            classNameInnerCircle,
+            "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-[18px] rounded-full bg-gradient-to-r from-accent to-theme-orange stroke-none outline-none"
           )}
         />
       </RadioGroupPrimitive.Indicator>

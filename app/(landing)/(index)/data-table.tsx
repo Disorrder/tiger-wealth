@@ -21,7 +21,6 @@ import {
   TableHeader,
   TableRow,
 } from "~/components/ui/table";
-import { cn } from "~/lib/utils";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -58,7 +57,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className={className}>
       <h2 className="lg:t2-bold mb-[10px] text-[7px] lg:mb-10">
-        Tiger's Stock Leaderboard
+        Tiger&apos;s Stock Leaderboard
       </h2>
       <Table className="border-separate text-[3.5px] lg:text-[13px]">
         <TableHeader className="font-pt-serif">

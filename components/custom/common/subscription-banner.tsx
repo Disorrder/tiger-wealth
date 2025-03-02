@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { Card } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import CardWithCandles from "./card-with-candles";
 import Heading from "./heading";
@@ -15,10 +14,10 @@ function SubscriptionBanner() {
           <Heading className="max-w-[325px] lg:max-w-[940px]">
             Join the growing community of people making better investment
             decisions with{" "}
-            <span className="text-accent">Tiger’s Pulse Newsletter</span>
+            <span className="text-accent">Tiger&apos;s Pulse Newsletter</span>
           </Heading>
           <Subheading className="mx-auto mb-[33px] max-w-[325px] text-secondary-foreground lg:max-w-full">
-            Tiger Wealth Capital gives you tailored investment guidance that’s
+            Tiger Wealth Capital gives you tailored investment guidance that&apos;s
             simple, direct, and trustworthy.
           </Subheading>
           <div className="relative z-10 mb-[33px] flex items-center justify-center gap-3 lg:mb-16">

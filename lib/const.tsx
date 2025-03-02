@@ -9,6 +9,7 @@ import type {
   FeatureCardData,
   NavItem,
   PolicyNavItem,
+  SubscriptionCardBenefit,
   SubscriptionCardData,
 } from "./types";
 

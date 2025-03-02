@@ -46,11 +46,11 @@ function Testimonials() {
               >
                 <div className="flex flex-col items-center">
                   <p className="b2-mobile-regular lg:t2-regular mb-6 w-[310px] text-center text-primary-foreground lg:mb-20 lg:w-[944px]">
-                    As a doctor, I don't have time for investment research,
+                    As a doctor, I don&apos;t have time for investment research,
                     prior to launching Tiger Wealth Capital, Danny made me over
                     7x my money with one stock recommendation in 1 year. It was
                     game changing as a resident physician not making my full
-                    salary yet. I highly recommend signing up for Tiger's Stock
+                    salary yet. I highly recommend signing up for Tiger&apos;s Stock
                     Advisor!
                   </p>
                   <span className="b2-regular lg:b1-regular mb-16 block text-secondary-foreground">
