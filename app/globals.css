@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Nexa-Bold";
+  src: url("/fonts/Nexa-Bold.woff2");
+}
 
 @plugin "tailwindcss-animate";
 
@@ -7,6 +14,16 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-nexa: "Nexa-Bold";
+  --font-pt-serif: "PT Serif";
+  --container-xs: 390px;
+  --container-sm: 600px;
+  --container-md: 728px;
+  --container-lg: 984px;
+  --container-xl: 1240px;
+  --container-2xl: 1440px;
+  --container-padding-xs: 16px;
+  --container-padding-md: 0px;
 }
 
 :root {
@@ -34,7 +51,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 48px;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -43,27 +60,36 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.87 0 0);
+
+  /* Design system colors */
+  --button-foreground: oklch(1 0 0);
+  --header-background: oklch(0.116 0 0);
+  --footer-background: oklch(0.1 0 0);
+  --footer-foreground: oklch(1 0 0);
+  --footer-secondary-foreground: oklch(0.8 0 0);
+  --button-background-from: oklch(0.741 0.177 33.764);
+  --button-background-to: oklch(0.638 0.177 33.764);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: var(--color-dark-gray);
+  --foreground: var(--color-traffic-white);
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: var(--color-tangerine);
+  --primary-foreground: var(--color-traffic-white);
   --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: var(--color-silver-gray);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: var(--color-tangerine);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
+  --border: oklch(0.898 0 0);
+  --input: oklch(0.898 0 0);
   --ring: oklch(0.439 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
@@ -78,6 +104,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Design system colors */
+  --button-foreground: oklch(1 0 0);
+  --header-background: oklch(0.116 0 0);
+  --footer-background: oklch(0.1 0 0);
+  --footer-foreground: oklch(1 0 0);
+  --footer-secondary-foreground: oklch(0.8 0 0);
+  --button-background-from: oklch(0.741 0.177 33.764);
+  --button-background-to: oklch(0.638 0.177 33.764);
 }
 
 @theme inline {
@@ -117,6 +152,53 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-border-gray: var(--border-gray);
+
+  /* Design system colors */
+  --color-traffic-white: var(--traffic-white);
+  --color-light-green: var(--light-green);
+  --color-light-gray: var(--light-gray);
+  --color-silver-gray: var(--silver-gray);
+  --color-paradise-red: var(--paradise-red);
+  --color-vampire-black: var(--vampire-black);
+  --color-dark-gray: var(--dark-gray);
+  --color-button-foreground: var(--button-foreground);
+  --color-header-background: var(--header-background);
+  --color-footer-background: var(--footer-background);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-footer-secondary-foreground: var(--footer-secondary-foreground);
+
+  /* Old Colors */
+  --color-theme-orange: #ff5722;
+  --color-dark-green: #0d3512;
+  --color-tangerine: #ff8a65;
+  --color-vampire-black: #0a0a0a;
+
+  /* New Colors */
+  --color-light-green: #53eb8d;
+  --color-paradise-red: #e94d5e;
+  --color-dark-gray: #161716;
+  --color-traffic-white: #f5ece9;
+  --color-silver-gray: #b0a9a7;
+  --color-cornsilk: #fff9dc;
+  --color-light-gray: #1f201f;
+  --color-border-gray: #2c2d2c;
+
+  /* Gradients */
+  --color-gradient-cta-from: #ff8a65;
+  --color-gradient-cta-to: #ff5722;
+
+  --color-gradient-highlight-from: #ff8a65;
+  --color-gradient-highlight-to: #53eb8d;
+
+  --color-gradient-dark-gray-from: #1f201f;
+  --color-gradient-dark-gray-to: #1f201f;
+
+  --color-gradient-light-green-from: #53eb8d;
+  --color-gradient-light-green-to: #53eb8d;
+
+  --color-gradient-paradise-red-from: #e94d5e;
+  --color-gradient-paradise-red-to: #e94d5e;
 }
 
 @layer base {
@@ -126,4 +208,112 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@utility h1-bold {
+  font-family: var(--font-nexa);
+  font-size: 64px;
+  line-height: 96px;
+}
+
+@utility h2-bold {
+  font-family: var(--font-nexa);
+  font-size: 48px;
+  line-height: 64px;
+}
+
+@utility h3-bold {
+  font-family: var(--font-nexa);
+  font-size: 40px;
+  line-height: 56px;
+}
+
+@utility t1-bold {
+  font-family: var(--font-nexa);
+  font-size: 32px;
+  line-height: 48px;
+}
+
+@utility t1-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 32px;
+  line-height: 48px;
+}
+
+@utility t2-bold {
+  font-family: var(--font-nexa);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@utility t2-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@utility b1-bold {
+  font-family: var(--font-nexa);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@utility b1-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@utility b2-mobile-bold {
+  font-family: var(--font-nexa);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@utility b2-mobile-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@utility b2-bold {
+  font-family: var(--font-nexa);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@utility b2-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@utility b3-bold {
+  font-family: var(--font-nexa);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@utility b3-regular {
+  font-family: var(--font-pt-serif);
+  font-size: 12px;
+  line-height: 18px;
 }
