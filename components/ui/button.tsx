@@ -5,24 +5,28 @@ import type * as React from "react";
 import { cn } from "~/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "gap-2 whitespace-nowrap outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+          "[&_*]:b3-bold xl:[&_*]:b2-bold b3-bold xl:b2-bold flex h-12 cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange text-primary-foreground",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
-          "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "[&_*]:b3-bold b3-bold lg:[&_*]:b2-bold relative flex h-12 cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange *:relative before:absolute before:inset-[1px] before:block before:rounded-[7px] before:bg-light-gray",
+        outlineSmall:
+          "relative flex h-[11px] w-[88px] cursor-pointer items-center justify-center rounded-[1.8px] bg-gradient-to-r from-accent to-theme-orange text-[3.5px] *:relative before:absolute before:inset-[0.2px] before:block before:rounded-[1.8px] before:bg-light-gray lg:h-[38px] lg:w-[319px] lg:rounded-[8px] lg:text-[13px] lg:before:inset-[0.7px] before:lg:rounded-[7px] [&_*]:text-[3.5px] lg:[&_*]:text-[13px]",
+        outlineDark:
+          "[&_*]:b3-bold lg:[&_*]:b2-bold relative flex h-12 cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange *:relative before:absolute before:inset-[1px] before:rounded-[7px] before:bg-dark-gray before:content-['']",
+        payment:
+          "flex h-[62px] w-[155px] items-center justify-center rounded-[16px] bg-vampire-black",
+        ghost: "hover:transparent px-0",
+        link: "hover:underlinem text-primary underline-offset-4",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md px-3 has-[>svg]:px-2.5",
+        default: " ",
+        // sm: "h-8 rounded-md px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
       },
