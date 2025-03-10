@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Card } from "~/components/ui/card";
 import CardWithGradient from "./card-with-gradient";
@@ -8,8 +9,10 @@ function ArticleCard() {
       <Card>
         <div className="flex h-full flex-col items-center justify-between">
           <div className="mx-auto mb-4 w-full">
-            <img
-              className=" rounded-[24px]"
+            <Image
+              className="rounded-[24px] lg:h-[324px] lg:w-100"
+              width={326}
+              height={263}
               src="/images/mock/article.png"
               alt="Happy rich men"
             />

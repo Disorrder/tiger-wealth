@@ -1,10 +1,9 @@
 import { cn } from "~/lib/utils";
-type Heading2Props = {
-  children: React.ReactNode;
-  className?: string | undefined;
-};
 
-function Heading2({ children, className }: Heading2Props) {
+function Heading2({
+  children,
+  className,
+}: { children: React.ReactNode; className?: string | undefined }) {
   return (
     <h2
       className={cn(

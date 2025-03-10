@@ -18,11 +18,11 @@ function CustomCarousel() {
           >
             <div className="flex flex-col items-center p-1">
               <p className="t2-regular mb-20 text-center text-primary-foreground">
-                As a doctor, I don&apos;t have time for investment research, prior to
-                launching Tiger Wealth Capital, Danny made me over 7x my money
-                with one stock recommendation in 1 year. It was game changing as
-                a resident physician not making my full salary yet. I highly
-                recommend signing up for Tiger&apos;s Stock Advisor!
+                As a doctor, I don&apos;t have time for investment research,
+                prior to launching Tiger Wealth Capital, Danny made me over 7x
+                my money with one stock recommendation in 1 year. It was game
+                changing as a resident physician not making my full salary yet.
+                I highly recommend signing up for Tiger&apos;s Stock Advisor!
               </p>
               <span className="b1-regular block text-secondary-foreground">
                 - Dr. RACHEL S.

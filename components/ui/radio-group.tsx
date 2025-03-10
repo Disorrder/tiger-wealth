@@ -13,7 +13,7 @@ function RadioGroup({
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
-      className={cn("flex gap-7", className)}
+      className={cn("up Маас flex gap-3", className)}
       {...props}
     />
   );
@@ -27,8 +27,8 @@ function RadioGroupItem({
     <RadioGroupPrimitive.Item
       data-slot="radio-group-item"
       className={cn(
-        "aspect-square size-4 shrink-0 rounded-full border border-secondary-foreground outline-none transition-[color,box-shadow] disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive dark:aria-invalid:ring-destructive/40",
-        className,
+        className?.includes("size-[18px]") ? "size-6" : "size-4",
+        "aspect-square shrink-0 rounded-full border border-secondary-foreground outline-none transition-[color,box-shadow] disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive dark:aria-invalid:ring-destructive/40",
       )}
       {...props}
     >
@@ -38,7 +38,8 @@ function RadioGroupItem({
       >
         <CircleIcon
           className={cn(
-            "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-[18px] rounded-full bg-gradient-to-r from-accent to-theme-orange stroke-none outline-none"
+            className?.includes("size-[18px]") ? "size-[18px]" : "size-3",
+            "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 rounded-full bg-gradient-to-r from-accent to-theme-orange stroke-none outline-none",
           )}
         />
       </RadioGroupPrimitive.Indicator>

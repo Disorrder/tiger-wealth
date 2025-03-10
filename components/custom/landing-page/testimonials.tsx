@@ -50,8 +50,8 @@ function Testimonials() {
                     prior to launching Tiger Wealth Capital, Danny made me over
                     7x my money with one stock recommendation in 1 year. It was
                     game changing as a resident physician not making my full
-                    salary yet. I highly recommend signing up for Tiger&apos;s Stock
-                    Advisor!
+                    salary yet. I highly recommend signing up for Tiger&apos;s
+                    Stock Advisor!
                   </p>
                   <span className="b2-regular lg:b1-regular mb-16 block text-secondary-foreground">
                     - Dr. RACHEL S.

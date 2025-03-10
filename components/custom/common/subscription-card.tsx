@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import {
   Accordion,
@@ -46,21 +47,16 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
             open={isOpen}
             onOpenChange={setIsOpen}
           >
-            <div
-              className={cn(
-                "flex w-full justify-between lg:hidden",
-                isOpen ? "mb-4" : "mb-2",
-              )}
-            >
+            <div className={cn("flex w-full justify-between lg:hidden")}>
               {" "}
               <RadioGroupItem
-                className="size-6"
+                className="size-[18px]"
                 value="3 months"
                 id="option1"
               />
               <CollapsibleTrigger asChild>
                 <Button className="relative z-30 px-0" variant="ghost">
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                   <span className="sr-only">Open/close subscription card</span>
                 </Button>
               </CollapsibleTrigger>
@@ -90,7 +86,7 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                 Benefits
               </h4>
               <Accordion type="single" collapsible defaultValue="item-1">
-                <ul className="relative z-30 mb-4 space-y-3 lg:space-y-4">
+                <ul className="relative z-30 space-y-3 lg:space-y-4">
                   {cardData.benefits.map((benefit, ind) => (
                     <li className="flex gap-2" key={benefit.benefitTitle}>
                       <div className="size-[18px] bg-[url(/icons/trending-up.svg)] bg-contain bg-no-repeat lg:size-6" />
@@ -101,7 +97,7 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                         <AccordionTrigger className="b3-regular lg:b2-regular flex items-baseline text-start font-bold">
                           {benefit.benefitTitle}
                         </AccordionTrigger>
-                        <AccordionContent className="b3-regular lg:b2-regular mt-2 w-[268px] text-secondary-foreground lg:w-[336px]">
+                        <AccordionContent className="b3-regular lg:b2-regular mt-1 w-[268px] text-secondary-foreground lg:w-[336px]">
                           {benefit.benefitDescription}
                         </AccordionContent>
                       </AccordionItem>
@@ -113,7 +109,9 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                 className="mt-auto h-[42px] w-[326px] lg:h-12 lg:w-[400px]"
                 variant="outline"
               >
-                <span className="b2-bold z-10 uppercase">SUBSCRIBE NOW</span>
+                <Link className="b2-bold z-10" href="/sign-up">
+                  SUBSCRIBE NOW
+                </Link>
               </Button>
             </CollapsibleContent>
           </Collapsible>
@@ -130,7 +128,7 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
           </div>
           <Card
             className={cn(
-              "flex w-[356px] flex-col rounded-[19px] border-none bg-vampire-black px-[15px] py-6 lg:h-[796px] lg:w-[448px] lg:rounded-[47px] lg:px-4 lg:py-12",
+              "flex w-[356px] flex-col rounded-[19px] border-none bg-vampire-black px-[14px] py-6 lg:h-[796px] lg:w-[448px] lg:rounded-[47px] lg:px-4 lg:py-12",
               isOpen ? "h-[578px]" : "h-[114px] py-4",
             )}
           >
@@ -140,21 +138,16 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
               onOpenChange={setIsOpen}
               defaultOpen={true}
             >
-              <div
-                className={cn(
-                  "flex w-full justify-between lg:hidden",
-                  isOpen ? "mb-4" : "mb-2",
-                )}
-              >
+              <div className={cn("flex w-full justify-between lg:hidden")}>
                 {" "}
                 <RadioGroupItem
-                  className="size-6"
+                  className="size-[18px]"
                   value="3 months"
                   id="option2"
                 />
                 <CollapsibleTrigger asChild>
                   <Button className="relative z-30 px-0" variant="ghost">
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                     <span className="sr-only">
                       Open/close subscription card
                     </span>
@@ -186,7 +179,7 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                   Benefits
                 </h4>
                 <Accordion type="single" collapsible defaultValue="item-1">
-                  <ul className="relative z-30 mb-4 space-y-3 lg:space-y-4">
+                  <ul className="relative z-30 space-y-3 lg:space-y-4">
                     {cardData.benefits.map((benefit, ind) => (
                       <li className="flex gap-2" key={benefit.benefitTitle}>
                         <div className="size-[18px] bg-[url(/icons/trending-up.svg)] bg-contain bg-no-repeat lg:size-6" />
@@ -197,7 +190,7 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                           <AccordionTrigger className="b3-regular lg:b2-regular flex items-baseline text-start font-bold">
                             {benefit.benefitTitle}
                           </AccordionTrigger>
-                          <AccordionContent className="b3-regular lg:b2-regular mt-2 w-[268px] text-secondary-foreground lg:w-[336px]">
+                          <AccordionContent className="b3-regular lg:b2-regular mt-1 w-[268px] text-secondary-foreground lg:w-[336px]">
                             {benefit.benefitDescription}
                           </AccordionContent>
                         </AccordionItem>
@@ -209,7 +202,9 @@ function SubscriptionCard({ cardData }: SubscriptionCardProps) {
                   className="mt-auto h-[42px] w-[326px] lg:h-12 lg:w-[400px]"
                   variant="outline"
                 >
-                  <span className="b2-bold z-10 uppercase">SUBSCRIBE NOW</span>
+                  <Link className="b2-bold z-10" href="/sign-up">
+                    SUBSCRIBE NOW
+                  </Link>
                 </Button>
               </CollapsibleContent>
             </Collapsible>

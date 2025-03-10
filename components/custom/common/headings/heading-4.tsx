@@ -1,19 +1,19 @@
 import { cn } from "~/lib/utils";
 
-function BaseCard({
+function Heading4({
   children,
   className,
 }: { children: React.ReactNode; className?: string | undefined }) {
   return (
-    <div
+    <h1
       className={cn(
-        "rounded-3xl bg-light-gray p-4 lg:rounded-[48px] lg:p-0 lg:px-6 lg:py-[26px]",
+        "b2-mobile-regular xl:b1-regular mb-4 font-bold text-primary-foreground",
         className,
       )}
     >
       {children}
-    </div>
+    </h1>
   );
 }
 
-export default BaseCard;
+export default Heading4;

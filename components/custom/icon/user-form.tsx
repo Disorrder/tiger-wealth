@@ -1,6 +1,6 @@
 import { cn } from "~/lib/utils";
 
-function UserFormMobileIcon({
+function UserFormIcon({
   className,
   fill,
 }: { className?: string | undefined; fill?: string | undefined }) {
@@ -43,4 +43,4 @@ function UserFormMobileIcon({
   );
 }
 
-export default UserFormMobileIcon;
+export default UserFormIcon;

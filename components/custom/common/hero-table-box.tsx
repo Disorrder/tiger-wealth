@@ -4,10 +4,10 @@ import { DataTable } from "~/app/(landing)/(index)/data-table";
 import { Button } from "~/components/ui/button";
 import { data } from "~/lib/mock";
 import CardWithCandles from "./card-with-candles";
-import Heading from "./heading";
-import Subheading from "./subheading";
+import Heading from "./headings/heading";
+import Subheading from "./headings/subheading";
 
-function HeroTable() {
+function HeroTableBox() {
   return (
     <>
       <div className="relative flex justify-center">
@@ -43,10 +43,10 @@ function HeroTable() {
           </div>
         </CardWithCandles>
       </div>
-      <div className="px-5 pt-[281px] xl:pt-[465px]">
+      <div className="px-5 pt-[281px] xl:pt-[465px] ">
         {" "}
         <DataTable
-          className="relative z-10 mx-auto min-h-[179px] max-w-[310px] rounded-[11px] bg-light-gray p-[6px] outline-4 outline-border-gray lg:max-w-[1176px] lg:rounded-[48px] lg:p-9 lg:outline-[14px]"
+          className="relative z-10 mx-auto min-h-[179px] max-w-[310px] rounded-[11px] bg-light-gray p-[6px] outline-4 outline-border-gray lg:max-w-[1120px] lg:rounded-[38px] lg:p-9 lg:outline-[15px]"
           columns={columns}
           data={data}
         />
@@ -55,4 +55,4 @@ function HeroTable() {
   );
 }
 
-export default HeroTable;
+export default HeroTableBox;

@@ -5,12 +5,12 @@ import type * as React from "react";
 import { cn } from "~/lib/utils";
 
 const buttonVariants = cva(
-  "gap-2 whitespace-nowrap outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "gap-2 whitespace-nowrap px-6 py-3 outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "[&_*]:b3-bold xl:[&_*]:b2-bold b3-bold xl:b2-bold flex h-12 cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange text-primary-foreground",
+          "[&_*]:b3-bold xl:[&_*]:b2-bold b3-bold xl:b2-bold flex h-[42px] cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange text-primary-foreground lg:h-12",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:
@@ -20,9 +20,11 @@ const buttonVariants = cva(
         outlineDark:
           "[&_*]:b3-bold lg:[&_*]:b2-bold relative flex h-12 cursor-pointer items-center justify-center rounded-[8px] bg-gradient-to-r from-accent to-theme-orange *:relative before:absolute before:inset-[1px] before:rounded-[7px] before:bg-dark-gray before:content-['']",
         payment:
-          "flex h-[62px] w-[155px] items-center justify-center rounded-[16px] bg-vampire-black",
+          "flex h-[62px] w-[155px] items-center justify-center rounded-[16px] bg-vampire-black xl:h-[80px] xl:w-[200px]",
         ghost: "hover:transparent px-0",
         link: "hover:underlinem text-primary underline-offset-4",
+        select:
+          "b3-regular xl:b2-regular flex h-[42px] cursor-pointer items-center justify-center rounded-[8px] lg:h-12",
       },
       size: {
         default: " ",

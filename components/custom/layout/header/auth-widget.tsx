@@ -19,8 +19,8 @@ function AuthWidget({ userStatus }: AuthWidgetProps) {
               </Link>
             </span>
           </Button>
-          <Button className="h-12 w-[112px]" asChild>
-            <Link className="b2-bold" href="/sigh-up">
+          <Button className="w-[112px]" asChild>
+            <Link className="b2-bold" href="/sign-up">
               SIGN UP
             </Link>
           </Button>

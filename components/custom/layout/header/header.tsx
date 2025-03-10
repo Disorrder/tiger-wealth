@@ -17,9 +17,9 @@ function Header() {
   return (
     <div className="bg-header-background">
       {" "}
-      <header className="container mx-auto flex h-[50px] w-full items-center justify-between px-4 xl:h-24 xl:max-w-[1440px]">
+      <header className="container mx-auto flex h-[50px] w-full items-center justify-between px-4 lg:h-24 xl:max-w-[1440px]">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger className="lg:hidden">
             <Menu style={{ width: "24px", height: "24px" }} />
           </SheetTrigger>
           <SheetContent className="p-4" side="left">
@@ -27,7 +27,7 @@ function Header() {
               Navigation menu of mobile version
             </SheetTitle>
             <nav className="b2-mobile-regular space-y-4">
-              <Link className="block" href="/">
+              <Link className="block" href="/why-tiger-stocks">
                 Why Tiger Stocks
               </Link>
               <Separator className="bg-secondary-foreground/20" />
@@ -42,7 +42,7 @@ function Header() {
           </SheetContent>
         </Sheet>
         <Logo className="h-6 w-[138px] xl:h-16 xl:w-[367px]" theme="dark" />
-        <div className="hidden items-center xl:flex">
+        <div className="hidden items-center lg:flex">
           <HeaderNav />
           <AuthWidget userStatus={userStatus} />
         </div>

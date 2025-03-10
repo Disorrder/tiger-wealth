@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import CardWithCandles from "./card-with-candles";
-import Heading from "./heading";
-import Subheading from "./subheading";
+import Heading from "./headings/heading";
+import Subheading from "./headings/subheading";
 import UnderlinedText from "./underlined-text";
 
 function SubscriptionBanner() {
@@ -17,8 +17,8 @@ function SubscriptionBanner() {
             <span className="text-accent">Tiger&apos;s Pulse Newsletter</span>
           </Heading>
           <Subheading className="mx-auto mb-[33px] max-w-[325px] text-secondary-foreground lg:max-w-full">
-            Tiger Wealth Capital gives you tailored investment guidance that&apos;s
-            simple, direct, and trustworthy.
+            Tiger Wealth Capital gives you tailored investment guidance
+            that&apos;s simple, direct, and trustworthy.
           </Subheading>
           <div className="relative z-10 mb-[33px] flex items-center justify-center gap-3 lg:mb-16">
             <form>
@@ -42,15 +42,21 @@ function SubscriptionBanner() {
           store your name and email address for the purpose of sending you our
           newsletter and related updates, and you agree to our{" "}
           <UnderlinedText>
-            <Link href="/terms-of-service">Terms of Service</Link>
+            <Link href="/terms-&-conditions/terms-of-service">
+              Terms of Service
+            </Link>
           </UnderlinedText>
           ,{" "}
           <UnderlinedText>
-            <Link href="/terms-of-condidions">Terms and Conditions</Link>
+            <Link href="/terms-&-conditions/terms-and-condidions">
+              Terms and Conditions
+            </Link>
           </UnderlinedText>{" "}
           and{" "}
           <UnderlinedText>
-            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-&-conditions/privacy-policy">
+              Privacy Policy
+            </Link>
           </UnderlinedText>
           .
         </p>

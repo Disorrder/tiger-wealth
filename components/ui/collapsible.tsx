@@ -14,6 +14,7 @@ function CollapsibleTrigger({
   return (
     <CollapsiblePrimitive.CollapsibleTrigger
       data-slot="collapsible-trigger"
+      className="[&[data-state=open]>svg]:rotate-180"
       {...props}
     />
   );
