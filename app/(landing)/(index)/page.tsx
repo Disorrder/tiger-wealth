@@ -6,10 +6,10 @@ import React from "react";
 import ArticleCard from "~/components/custom/common/article-card";
 import CardWithGradient from "~/components/custom/common/card-with-gradient";
 import FeatureCard from "~/components/custom/common/feature-card";
-import Heading from "~/components/custom/common/heading";
-import HeroTable from "~/components/custom/common/hero-table";
+import Heading from "~/components/custom/common/headings/heading";
+import Subheading from "~/components/custom/common/headings/subheading";
+import HeroTable from "~/components/custom/common/hero-table-box";
 import Logo from "~/components/custom/common/logo";
-import Subheading from "~/components/custom/common/subheading";
 import SubscriptionBanner from "~/components/custom/common/subscription-banner";
 import SubscriptionCard from "~/components/custom/common/subscription-card";
 import Testimonials from "~/components/custom/landing-page/testimonials";
@@ -24,11 +24,9 @@ import {
 function IndexPage() {
   return (
     <>
-      <div className="space-y-20 overflow-hidden lg:space-y-40">
+      <div className="space-y-20 overflow-hidden pt-6 lg:space-y-40 xl:pt-12">
         <section className="container relative mx-auto px-4">
           <HeroTable />
-          <div className="absolute right-20 bottom-0 size-[100px] rounded-full bg-light-green/40 blur-[36px] lg:right-60 lg:size-[600px] lg:blur-[80px]" />
-          <div className="absolute bottom-0 left-20 size-[100px] rounded-full bg-paradise-red/40 blur-[36px] lg:left-60 lg:size-[600px] lg:blur-[80px] " />
         </section>
         <section className="container xs:m-0 mx-auto px-4">
           <Heading className="w-[251px] md:w-full">
@@ -41,8 +39,8 @@ function IndexPage() {
             investing rather than sifting through endless research.
           </Subheading>
           <div className="relative grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 lg:gap-12 2xl:grid-cols-3">
-            <div className="-z-10 absolute right-0 size-[100px] translate-y-64 rounded-full bg-light-green/20 blur-[69px] lg:size-[402px] lg:translate-x-1/2 lg:translate-y-[70%] lg:blur-[150px]" />
-            <div className="-translate-y-[550px] -translate-x-1/3 lg:-translate-x-1/2 -z-10 lg:-translate-y-[300px] absolute bottom-0 left-0 size-[100px] rounded-full bg-paradise-red/20 blur-[69px] lg:size-[402px] lg:blur-[150px]" />
+            <div className="-z-10 absolute right-0 size-[100px] translate-y-64 rounded-full bg-light-green/20 blur-[69px] lg:size-[402px] lg:translate-x-1/2 lg:translate-y-[70%] lg:blur-[277px]" />
+            <div className="-translate-y-[550px] -translate-x-1/3 lg:-translate-x-1/2 -z-10 lg:-translate-y-[300px] absolute bottom-0 left-0 size-[100px] rounded-full bg-paradise-red/20 blur-[69px] lg:size-[402px] lg:blur-[277px]" />
             {FEATURE_CARDS_DATA.map((card, index) => (
               <div key={card.title}>
                 <FeatureCard index={index} featureCardData={card} />
@@ -108,10 +106,10 @@ function IndexPage() {
               Together We’ll Win Financial Freedom!
             </span>
           </Subheading>
-          <RadioGroup defaultValue="comfortable">
-            <div className="relative mx-auto flex flex-wrap justify-center gap-6 lg:gap-11">
-              <div className="absolute top-[210px] left-[220px] size-[402px] rounded-full bg-light-green/40 blur-[277px] lg:left-0 lg:translate-x-1/4 lg:translate-y-[35%]" />
-              <div className="lg:-translate-x-1/4 -top-[40px] -left-[190px] absolute size-[402px] rounded-full bg-paradise-red/40 blur-[277px] lg:left-0 lg:translate-y-[35%]" />
+          <RadioGroup>
+            <div className="before:-translate-x-170 before:-translate-y-25 relative mx-auto flex flex-wrap justify-center gap-6 before:absolute before:bottom-0 before:hidden before:h-[184px] before:w-[573px] before:bg-[url('/images/diagram.svg')] before:bg-contain before:bg-no-repeat before:content-[''] lg:gap-11 before:lg:block ">
+              <div className="absolute right-0 size-[402px] translate-x-70 translate-y-54 rounded-full bg-light-green/40 blur-[277px] lg:z-10 lg:translate-x-80 lg:translate-y-40" />
+              <div className="lg:-translate-x-96 -translate-x-40 -translate-y-20 absolute left-0 size-[402px] rounded-full bg-paradise-red/40 blur-[277px] lg:translate-y-74" />
               <SubscriptionCard cardData={SUBSCRIPTIONS_CARDS_DATA_1} />
               <SubscriptionCard cardData={SUBSCRIPTIONS_CARDS_DATA_2} />
             </div>
@@ -138,8 +136,8 @@ function IndexPage() {
           <SubscriptionBanner />
         </section>
         <section className="container relative mx-auto px-4">
-          <div className="-z-10 -translate-x-5 absolute bottom-0 left-0 size-[133px] rounded-full bg-paradise-red/40 blur-[69px] lg:right-0 lg:size-[402px] lg:translate-x-[60%] lg:translate-y-[35%] lg:blur-[250px]" />
-          <div className="lg:-translate-x-[60%] -z-10 absolute right-0 size-[133px] translate-x-16 translate-y-32 rounded-full bg-light-green/40 blur-[69px] lg:left-0 lg:size-[402px] lg:translate-y-[35%] lg:blur-[250px]" />
+          <div className="-z-10 -translate-x-5 lg:-translate-y-70 absolute bottom-0 left-0 size-[133px] rounded-full bg-paradise-red/40 blur-[69px] lg:right-0 lg:size-[402px] lg:translate-x-328 lg:blur-[250px]" />
+          <div className="lg:-translate-x-47 -z-10 absolute right-0 size-[133px] translate-x-16 translate-y-32 rounded-full bg-light-green/40 blur-[69px] lg:left-0 lg:size-[402px] lg:translate-y-25 lg:blur-[250px]" />
           <Heading className="mb-6 lg:mb-16">
             Meet The <span className="text-accent"> Founder</span>
           </Heading>
@@ -148,13 +146,13 @@ function IndexPage() {
               <h2 className="b2-bold lg:t2-bold mb-1 text-primary-foreground lg:mb-2">
                 Danny Raymond Aoun
               </h2>
-              <p className="b3-bold lg:b1-regular mb-4 text-secondary-foreground lg:mb-8">
+              <p className="b3-regular lg:b1-regular mb-4 text-secondary-foreground lg:mb-8">
                 Tiger Wealth Capital - CEO & Founder
               </p>
               <h2 className="b2-bold lg:t2-bold mb-2 text-primary-foreground lg:mb-4">
                 Vision
               </h2>
-              <p className="b3-bold lg:b1-regular mb-4 text-secondary-foreground">
+              <p className="b3-regular lg:b1-regular mb-4 text-secondary-foreground">
                 At Tiger Wealth Capital, our vision is to revolutionize personal
                 investing by making professional-grade financial insights and
                 transformative stock opportunities accessible to everyone, just
@@ -166,7 +164,6 @@ function IndexPage() {
                 Technology.
               </p>
             </div>
-
             <CardWithGradient className="order-1 mb-6 h-[478px] w-[358px] lg:order-2 lg:h-[596px] lg:w-[448px]">
               <Image
                 src="/images/raster/danny.png"
@@ -181,7 +178,7 @@ function IndexPage() {
               <h2 className="b2-bold lg:t2-bold mb-2 text-primary-foreground lg:mb-4">
                 Background
               </h2>
-              <p className="b3-bold lg:b1-regular mb-4 text-secondary-foreground">
+              <p className="b3-regular lg:b1-regular mb-4 text-secondary-foreground">
                 Danny Aoun is a proud U.S. Military veteran, a graduate of
                 Harvard, and Columbia Business School. He has over 10 years of
                 experience investing in biotech and a successful career on Wall

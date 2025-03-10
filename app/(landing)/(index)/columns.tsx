@@ -24,14 +24,14 @@ export const columns: ColumnDef<LeaderStock>[] = [
     accessorKey: "symbol",
     header: ({ column }) => {
       return (
-        <div className="flex gap-[1px] lg:gap-1 lg:gap-[1px]">
+        <div className="flex gap-[1px] lg:gap-1">
           <span className="block text-left">Symbol</span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -46,13 +46,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Current Price</span>
+          <span className="block text-left">
+            Current <br /> Price
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -63,13 +65,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Recommended Date</span>
+          <span className="block text-left">
+            Recommended <br /> Date
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -84,13 +88,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Market Cap</span>
+          <span className="block text-left">
+            Market <br /> Cap
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -105,13 +111,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Recommended Price</span>
+          <span className="block text-left">
+            Recommended <br /> Price
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -122,13 +130,34 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Return Since Rec</span>
+          <span className="block text-left">
+            Return Since <br /> Rec
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
+          </button>
+        </div>
+      );
+    },
+  },
+  {
+    accessorKey: "sp500Return",
+    header: ({ column }) => {
+      return (
+        <div className="flex gap-[1px] lg:gap-1">
+          <span className="block text-left">
+            S&P 500 <br /> Return
+          </span>
+          <button
+            className="size-6 cursor-pointer "
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+            type="button"
+          >
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -139,13 +168,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Return vs S&P 500</span>
+          <span className="block text-left">
+            Return VS S&P <br /> 500
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -158,11 +189,11 @@ export const columns: ColumnDef<LeaderStock>[] = [
         <div className="flex gap-[1px] lg:gap-1">
           <span className="block text-left">Risk</span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -173,34 +204,19 @@ export const columns: ColumnDef<LeaderStock>[] = [
     },
   },
   {
-    accessorKey: "sP500ReturnsSince",
+    accessorKey: "openOrClosed",
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">S&P 500 returns since</span>
+          <span className="block text-left">
+            Open or <br /> Closed
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
-          </button>
-        </div>
-      );
-    },
-  },
-  {
-    accessorKey: "closeOpen",
-    header: ({ column }) => {
-      return (
-        <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Close/ Open</span>
-          <button
-            className="size-1 lg:size-4"
-            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-            type="button"
-          >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -211,13 +227,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Closing Price</span>
+          <span className="block text-left">
+            Closing <br /> Price
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
@@ -228,13 +246,15 @@ export const columns: ColumnDef<LeaderStock>[] = [
     header: ({ column }) => {
       return (
         <div className="flex gap-[1px] lg:gap-1">
-          <span className="block text-left">Closed date</span>
+          <span className="block text-left">
+            Closed <br /> date
+          </span>
           <button
-            className="size-1 lg:size-4"
+            className="size-6 cursor-pointer "
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
             type="button"
           >
-            <ChevronsUpDown className="m-auto size-[5px] lg:h-4 lg:w-3" />
+            <ChevronsUpDown className="m-auto size-4" />
           </button>
         </div>
       );
