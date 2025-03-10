@@ -2,7 +2,6 @@
 import { ChevronUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import ArticleCard from "~/components/custom/common/article-card";
 import CardWithGradient from "~/components/custom/common/card-with-gradient";
 import FeatureCard from "~/components/custom/common/feature-card";

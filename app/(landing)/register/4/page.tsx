@@ -1,7 +1,6 @@
 "use client";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { useForm } from "react-hook-form";
 import BaseCard from "~/components/custom/common/base-card";
 import Heading from "~/components/custom/common/headings/heading";

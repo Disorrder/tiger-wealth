@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Heading3 from "~/components/custom/common/headings/heading-3";
-import Title2 from "~/components/custom/common/headings/heading-3";
 
 function RegisterLayout({ children }: { children: React.ReactNode }) {
   return (
