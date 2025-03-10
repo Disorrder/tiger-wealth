@@ -1,11 +1,11 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Eye } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import PasswordInput from "~/components/custom/authorization/password-input";
 import BaseCard from "~/components/custom/common/base-card";
-import Heading2 from "~/components/custom/common/heading-2";
-import Subheading2 from "~/components/custom/common/subheading-2";
+import Heading2 from "~/components/custom/common/headings/heading-2";
+import Subheading2 from "~/components/custom/common/headings/subheading-2";
 import { Button } from "~/components/ui/button";
 import {
   Form,
@@ -15,7 +15,6 @@ import {
   FormLabel,
   FormMessage,
 } from "~/components/ui/form";
-import { Input } from "~/components/ui/input";
 
 const formSchema = z.object({
   password: z.string().min(5).max(50),
@@ -34,33 +33,28 @@ function CreateNewPassword() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
   }
+
   return (
-    <BaseCard className="w-[572px] p-12">
+    <BaseCard className="px-4 py-6 lg:w-[572px] lg:p-12">
       <Heading2>Create New Password</Heading2>
       <Subheading2 className="max-w-[410px]">
         Your new password must be different from previous used passwords.
       </Subheading2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-4 lg:space-y-8"
+        >
           <FormField
             control={form.control}
             name="password"
-            render={({ field }) => (
+            render={() => (
               <FormItem>
-                <FormLabel className="b2-regular mb-2 text-primary-foreground">
+                <FormLabel className="b2-regular text-primary-foreground">
                   Password
                 </FormLabel>
                 <FormControl>
-                  <div className="relative flex items-center">
-                    {" "}
-                    <Input
-                      style={{ background: "-dark-gray" }}
-                      type="password"
-                      placeholder="Password"
-                      {...field}
-                    />{" "}
-                    <Eye className="absolute right-6" />
-                  </div>
+                  <PasswordInput />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -69,22 +63,13 @@ function CreateNewPassword() {
           <FormField
             control={form.control}
             name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="b2-regular mb-2 text-primary-foreground">
+            render={() => (
+              <FormItem className="mb-6">
+                <FormLabel className="b2-regular text-primary-foreground">
                   Confirm Password
                 </FormLabel>
                 <FormControl>
-                  <div className="relative flex items-center">
-                    {" "}
-                    <Input
-                      style={{ background: "-dark-gray" }}
-                      type="password"
-                      placeholder="Confirm Password"
-                      {...field}
-                    />{" "}
-                    <Eye className="absolute right-6" />
-                  </div>
+                  <PasswordInput />
                 </FormControl>
                 <FormMessage />
               </FormItem>

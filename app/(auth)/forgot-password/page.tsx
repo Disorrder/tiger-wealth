@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import BaseCard from "~/components/custom/common/base-card";
-import Heading2 from "~/components/custom/common/heading-2";
-import Subheading2 from "~/components/custom/common/subheading-2";
+import Heading2 from "~/components/custom/common/headings/heading-2";
+import Subheading2 from "~/components/custom/common/headings/subheading-2";
 import { Button } from "~/components/ui/button";
 import {
   Form,
@@ -33,19 +33,22 @@ function ForgotPassword() {
     console.log(values);
   }
   return (
-    <BaseCard className="w-[572px] p-12">
+    <BaseCard className="px-4 py-6 lg:w-[572px] lg:p-12">
       <Heading2>Forgot Password</Heading2>
-      <Subheading2 className="max-w-[340px]">
+      <Subheading2 className="mb-6 max-w-[290px] lg:mb-12 lg:max-w-[340px]">
         We will send you an email with a link for you to reset your password.
       </Subheading2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-4 lg:space-y-8"
+        >
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="b2-regular mb-2 text-primary-foreground">
+                <FormLabel className="b2-regular text-primary-foreground">
                   Email Address
                 </FormLabel>
                 <FormControl>
@@ -56,9 +59,7 @@ function ForgotPassword() {
             )}
           />
           <Button className="w-full" type="submit">
-            <Link className="b2-bold" href="/reset-password">
-              SEND LINK
-            </Link>
+            <Link href="/reset-password">SEND LINK</Link>
           </Button>
         </form>
       </Form>
